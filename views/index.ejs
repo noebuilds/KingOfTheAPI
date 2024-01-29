@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes From The Hill</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-container">
+        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg0.joyreactor.com%2Fpics%2Fpost%2Fgif-king-of-the-hill-bear-405284.gif&f=1&nofb=1&ipt=216afb666cfc46b5f5e459cbe56455c08352b8504aceb913d3fec0aaf0b420ef&ipo=images" alt="Background Image">
+    </div class = "main">
+    <h1>Quotes From The Hill</h1>
+    <span>Enter your favorite quotes, from the greatest show</span>
+    </div>
+<div>
+     
+    <div class="container">
+
+        <form action="/quotes" method="POST">
+            <input type="text" placeholder="name" name="name">
+            <input type="text" placeholder="quote" name="quote">
+            <button type="submit">Submit</button>
+        </form>
+        <div id="quotes" class="comic-strip-container">
+            <ul class="quote comic-strip">
+                <% for (var i = 0; i < quotes.length; i++) { %>
+                    <li class="quote-panel">
+                        <span class="quote-name"><%= quotes[i].name %></span>
+                        <span class="quote-text"><%= quotes[i].quote %></span>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div>
+            <button id="delete-button">delete quote</button>
+        </div>
+</div>
+    <footer class="footer">
+        <span>Built by <a href="https://noebuilds.com" target="_blank">noebuilds.com</a></span>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
